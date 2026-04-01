@@ -141,7 +141,7 @@ const HeroSection = () => {
       <div className="absolute top-1/2 right-0 -translate-y-1/2 w-[400px] h-[600px] bg-secondary/5 rounded-full blur-[100px]" />
 
       <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-12">
-        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 lg:gap-8 min-h-screen py-20 sm:py-24">
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-8 pt-24 pb-16 lg:min-h-screen lg:py-24">
 
           {/* ── LEFT: Text content ── */}
           <motion.div
@@ -198,7 +198,7 @@ const HeroSection = () => {
 
           {/* ── RIGHT: Portrait photo with maze-network decoration ── */}
           <motion.div
-            className="flex-shrink-0 relative flex items-center justify-center mt-2 lg:mt-0"
+            className="flex-shrink-0 relative flex items-center justify-center h-[280px] sm:h-[340px] md:h-[420px] lg:h-auto w-full lg:w-auto"
             initial={{ opacity: 0, x: 60 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.9, delay: 0.4 }}
@@ -210,7 +210,7 @@ const HeroSection = () => {
               duration={30}
             />
             <NetworkMazeRing
-              size={340}
+              size={260}
               className="md:hidden"
               duration={30}
             />
@@ -223,7 +223,7 @@ const HeroSection = () => {
               reverse
             />
             <NetworkMazeRing
-              size={290}
+              size={210}
               className="md:hidden"
               duration={22}
               reverse
@@ -253,7 +253,7 @@ const HeroSection = () => {
                 }}
               >
                 <div
-                  className="rounded-full overflow-hidden w-[200px] h-[200px] sm:w-[230px] sm:h-[230px] md:w-[290px] md:h-[290px]"
+                  className="rounded-full overflow-hidden w-[170px] h-[170px] sm:w-[200px] sm:h-[200px] md:w-[290px] md:h-[290px]"
                   style={{ background: "hsl(0 0% 4%)" }}
                 >
                   <img
