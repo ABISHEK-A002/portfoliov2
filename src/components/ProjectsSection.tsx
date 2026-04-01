@@ -146,12 +146,12 @@ const ProjectsSection = () => {
               exit={{ opacity: 0, scale: 0.9, y: 20 }}
               transition={{ type: "spring", damping: 25, stiffness: 300 }}
               onClick={(e) => e.stopPropagation()}
-              className="relative max-w-2xl w-full border border-primary/30 bg-card p-8 card-glow max-h-[85vh] overflow-y-auto"
+              className="relative max-w-2xl w-full border border-primary/30 bg-card p-5 sm:p-8 card-glow max-h-[85vh] overflow-y-auto"
             >
-              {/* Close button */}
+              {/* Close button — large and prominent on mobile */}
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 text-muted-foreground hover:text-primary transition-colors"
+                className="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-9 h-9 sm:w-8 sm:h-8 flex items-center justify-center rounded-full bg-card border border-primary/30 text-muted-foreground hover:text-primary hover:border-primary transition-colors"
               >
                 <X className="w-5 h-5" />
               </button>

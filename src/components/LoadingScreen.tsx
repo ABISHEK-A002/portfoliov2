@@ -20,7 +20,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
 
     const interval = setInterval(() => {
       setProgress((prev) => {
-        const next = prev + Math.random() * 3 + 1;
+        const next = prev + Math.random() * 1.2 + 0.4;
         if (next >= 100) {
           clearInterval(interval);
           setTimeout(onComplete, 600);
@@ -30,7 +30,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
         if (currentPhase) setPhase(currentPhase.text);
         return next;
       });
-    }, 50);
+    }, 80);
 
     return () => clearInterval(interval);
   }, [onComplete]);

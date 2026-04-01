@@ -20,15 +20,14 @@ const ContactSection = () => {
 
           <div className="grid sm:grid-cols-3 gap-4 mb-12">
             {[
-              { label: "EMAIL", value: "abishekarumugam2004@gmail.com", href: "mailto:abishekarumugam2004@gmail.com" },
-              { label: "GITHUB", value: "ABISHEK-A002", href: "https://github.com/ABISHEK-A002" },
-              { label: "LINKEDIN", value: "/abishekarumugam2004", href: "https://linkedin.com/in/abishekarumugam2004" },
+              { label: "EMAIL", value: "abishekarumugam2004@gmail.com", href: "mailto:abishekarumugam2004@gmail.com", external: false },
+              { label: "GITHUB", value: "ABISHEK-A002", href: "https://github.com/ABISHEK-A002", external: true },
+              { label: "LINKEDIN", value: "/abishekarumugam2004", href: "https://linkedin.com/in/abishekarumugam2004", external: true },
             ].map((link) => (
               <motion.a
                 key={link.label}
                 href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
+                {...(link.external ? { target: "_blank", rel: "noopener noreferrer" } : {})}
                 whileHover={{ y: -2 }}
                 className="p-4 border border-border/50 hover:border-primary/40 transition-all duration-300 group"
               >

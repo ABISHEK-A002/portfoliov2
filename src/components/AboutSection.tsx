@@ -16,17 +16,19 @@ const AboutSection = () => {
           <div className="grid md:grid-cols-2 gap-12">
             <div className="space-y-6">
               <p className="text-sm text-card-foreground leading-relaxed">
-                B.Tech student in <span className="text-primary">Artificial Intelligence & Data Science</span> at 
-                Sri Krishna College of Technology with a CGPA of <span className="text-primary">8.09</span>. 
-                I build intelligent systems that bridge the gap between research and real-world applications.
+                I'm an <span className="text-primary">AI Engineer & Full-Stack Developer</span> who 
+                thrives at the intersection of research and real-world deployment. I don't just build 
+                models — I ship <span className="text-primary">products</span> that solve hard problems 
+                in manufacturing, NLP, and computer vision.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
-                From deploying CNN models for industrial defect detection to building dual AI agents with RAG — 
-                I optimize for impact. When I'm not fine-tuning models, I'm fine-tuning my jab-cross combo in the boxing ring.
+                From deploying CNN models for industrial defect detection to architecting dual AI agents 
+                with RAG — I optimise for impact. When I'm not fine-tuning models, I'm fine-tuning my 
+                jab-cross combo in the boxing ring.
               </p>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 Published researcher. Hackathon finalist. Multilingual — English, Tamil, Hindi. 
-                Currently designing a Boxing Trainer ML Model that analyzes punch accuracy at sub-100ms latency.
+                Currently designing a Boxing Trainer ML Model that analyses punch accuracy at sub-100ms latency.
               </p>
             </div>
 

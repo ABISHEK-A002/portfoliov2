@@ -80,10 +80,10 @@ const SkillsSection = () => {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="flex gap-3 p-3 border border-border/30 hover:border-secondary/30 transition-colors"
+                  className="flex gap-3 p-3 border border-primary/20 hover:border-primary/40 transition-colors bg-primary/[0.03]"
                 >
-                  <span className="text-secondary text-xs mt-0.5">◆</span>
-                  <p className="text-xs text-muted-foreground leading-relaxed">{item}</p>
+                  <span className="text-primary text-xs mt-0.5" style={{ textShadow: '0 0 6px hsl(43 90% 55% / 0.5)' }}>◆</span>
+                  <p className="text-xs text-card-foreground leading-relaxed">{item}</p>
                 </motion.div>
               ))}
             </div>
