@@ -14,7 +14,7 @@ const ContactSection = () => {
           <p className="text-xs tracking-[0.3em] text-secondary mb-2 font-body">05 //</p>
           <h2 className="font-display text-3xl md:text-4xl tracking-wider text-glow-gold mb-6">GET IN TOUCH</h2>
           <p className="text-sm text-muted-foreground mb-12 leading-relaxed">
-            Whether you want to discuss AI, collaborate on a project, or just trade boxing tips — 
+            Whether you want to discuss AI, collaborate on a project, or just trade boxing tips —
             my inbox is always open. Let's build something remarkable.
           </p>
 
@@ -22,7 +22,7 @@ const ContactSection = () => {
             {[
               { label: "EMAIL", value: "abishekarumugam2004@gmail.com", href: "mailto:abishekarumugam2004@gmail.com", external: false },
               { label: "GITHUB", value: "ABISHEK-A002", href: "https://github.com/ABISHEK-A002", external: true },
-              { label: "LINKEDIN", value: "/abishekarumugam2004", href: "https://linkedin.com/in/abishekarumugam2004", external: true },
+              { label: "LINKEDIN", value: "/abishek002", href: "https://linkedin.com/in/abishekarumugam2004", external: true },
             ].map((link) => (
               <motion.a
                 key={link.label}
