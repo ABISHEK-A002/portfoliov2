@@ -22,7 +22,7 @@ const ContactSection = () => {
             {[
               { label: "EMAIL", value: "abishekarumugam2004@gmail.com", href: "mailto:abishekarumugam2004@gmail.com", external: false },
               { label: "GITHUB", value: "ABISHEK-A002", href: "https://github.com/ABISHEK-A002", external: true },
-              { label: "LINKEDIN", value: "/abishek002", href: "https://linkedin.com/in/abishekarumugam2004", external: true },
+              { label: "LINKEDIN", value: "/abishek002", href: "https://linkedin.com/in/abishek002", external: true },
             ].map((link) => (
               <motion.a
                 key={link.label}
