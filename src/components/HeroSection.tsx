@@ -21,7 +21,7 @@ const NetworkMazeRing = ({
   // Generate maze-like path segments around the circle
   const segments: string[] = [];
   const nodePositions: { x: number; y: number }[] = [];
-  const segCount = 24;
+  const segCount = 12;
 
   for (let i = 0; i < segCount; i++) {
     const angle1 = (i / segCount) * Math.PI * 2;
@@ -85,7 +85,7 @@ const NetworkMazeRing = ({
             strokeLinecap="round"
             initial={{ pathLength: 0 }}
             animate={{ pathLength: 1 }}
-            transition={{ duration: 2, delay: i * 0.05, ease: "easeOut" }}
+            transition={{ duration: 4, delay: i * 0.1, ease: "easeOut" }}
           />
         ))}
         {/* Node dots at junction points */}
@@ -98,7 +98,7 @@ const NetworkMazeRing = ({
             fill={gold}
             initial={{ opacity: 0 }}
             animate={{ opacity: [0.2, 0.7, 0.2] }}
-            transition={{ duration: 2 + (i % 3), repeat: Infinity, delay: i * 0.1 }}
+            transition={{ duration: 4 + (i % 3) * 1.5, repeat: Infinity, delay: i * 0.15 }}
           />
         ))}
         {/* Travelling pulse highlights */}
@@ -117,8 +117,8 @@ const NetworkMazeRing = ({
               opacity: [0, 0.9, 0],
             }}
             transition={{
-              duration: 3,
-              delay: i * 0.6,
+              duration: 6,
+              delay: i * 0.8,
               repeat: Infinity,
               ease: "easeInOut",
             }}
@@ -207,25 +207,25 @@ const HeroSection = () => {
             <NetworkMazeRing
               size={420}
               className="hidden md:block"
-              duration={30}
+              duration={60}
             />
             <NetworkMazeRing
               size={260}
               className="md:hidden"
-              duration={30}
+              duration={60}
             />
 
             {/* Inner maze network ring (counter-rotating) */}
             <NetworkMazeRing
               size={360}
               className="hidden md:block"
-              duration={22}
+              duration={44}
               reverse
             />
             <NetworkMazeRing
               size={210}
               className="md:hidden"
-              duration={22}
+              duration={44}
               reverse
             />
 
@@ -241,7 +241,7 @@ const HeroSection = () => {
             {/* Portrait container with gold border */}
             <motion.div
               animate={{ y: [0, -12, 0] }}
-              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
               className="relative z-10"
             >
               <div
@@ -275,19 +275,19 @@ const HeroSection = () => {
                 className="absolute -top-3 -right-3 w-3 h-3 rounded-full bg-primary"
                 style={{ boxShadow: "0 0 12px hsl(43 90% 55%)" }}
                 animate={{ scale: [1, 1.5, 1], opacity: [0.7, 1, 0.7] }}
-                transition={{ duration: 2, repeat: Infinity }}
+                transition={{ duration: 4, repeat: Infinity }}
               />
               <motion.div
                 className="absolute -bottom-3 -left-4 w-2 h-2 rounded-full bg-primary"
                 style={{ boxShadow: "0 0 10px hsl(43 90% 55% / 0.8)" }}
                 animate={{ scale: [1, 1.6, 1], opacity: [0.6, 1, 0.6] }}
-                transition={{ duration: 2.5, repeat: Infinity, delay: 0.5 }}
+                transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
               />
               <motion.div
                 className="absolute top-1/2 -right-6 w-1.5 h-1.5 rounded-full bg-primary"
                 style={{ boxShadow: "0 0 8px hsl(43 90% 55% / 0.6)" }}
                 animate={{ scale: [1, 1.8, 1], opacity: [0.5, 1, 0.5] }}
-                transition={{ duration: 3, repeat: Infinity, delay: 1 }}
+                transition={{ duration: 6, repeat: Infinity, delay: 1 }}
               />
             </motion.div>
           </motion.div>
