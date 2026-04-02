@@ -20,10 +20,10 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
 
     const interval = setInterval(() => {
       setProgress((prev) => {
-        const next = prev + Math.random() * 1.2 + 0.4;
+        const next = prev + Math.random() * 2.0 + 1.5;
         if (next >= 100) {
           clearInterval(interval);
-          setTimeout(onComplete, 600);
+          setTimeout(onComplete, 400);
           return 100;
         }
         const currentPhase = [...phases].reverse().find((p) => next >= p.at);
