@@ -6,50 +6,50 @@
 
 @layer base {
   :root {
-    --background: 0 0% 4%;
+    --background: 0 0% 4%; /* Deep Space Black */
     --foreground: 40 30% 90%;
 
-    --card: 0 0% 7%;
+    --card: 0 0% 6%;
     --card-foreground: 40 20% 85%;
 
-    --popover: 0 0% 7%;
+    --popover: 0 0% 6%;
     --popover-foreground: 40 20% 85%;
 
-    --primary: 43 90% 55%;
+    --primary: 46 65% 52%; /* Premium Gold: D4AF37 */
     --primary-foreground: 0 0% 4%;
 
-    --secondary: 350 70% 50%;
+    --secondary: 322 81% 43%; /* Red Violet */
     --secondary-foreground: 0 0% 100%;
 
-    --muted: 0 0% 12%;
+    --muted: 0 0% 10%;
     --muted-foreground: 40 10% 50%;
 
-    --accent: 280 60% 55%;
+    --accent: 340 82% 52%; /* Vibrant Red Violet for accents */
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 43 20% 15%;
+    --border: 46 40% 15%; /* Gold tinted dark border */
     --input: 0 0% 12%;
-    --ring: 43 90% 55%;
+    --ring: 46 65% 52%;
 
     --radius: 0.5rem;
 
-    --neon-gold: 43 90% 55%;
-    --neon-red: 350 70% 50%;
-    --neon-violet: 280 60% 55%;
+    --neon-gold: 46 65% 52%;
+    --neon-red: 340 82% 52%;
+    --neon-violet: 322 81% 43%;
     --deep-space: 0 0% 2%;
-    --grid-line: 43 20% 8%;
+    --grid-line: 46 40% 12%; /* Subtle gold-tinted grid */
 
     --sidebar-background: 0 0% 4%;
     --sidebar-foreground: 40 20% 85%;
-    --sidebar-primary: 43 90% 55%;
+    --sidebar-primary: 46 65% 52%;
     --sidebar-primary-foreground: 0 0% 4%;
-    --sidebar-accent: 280 60% 55%;
+    --sidebar-accent: 322 81% 43%;
     --sidebar-accent-foreground: 0 0% 100%;
-    --sidebar-border: 43 20% 15%;
-    --sidebar-ring: 43 90% 55%;
+    --sidebar-border: 46 40% 15%;
+    --sidebar-ring: 46 65% 52%;
   }
 }
 
@@ -61,6 +61,10 @@
   body {
     @apply bg-background text-foreground font-body;
     overflow-x: hidden;
+    background-image: 
+      radial-gradient(circle at 15% 25%, hsl(46 65% 52% / 0.08), transparent 45%),
+      radial-gradient(circle at 85% 75%, hsl(322 81% 43% / 0.08), transparent 45%);
+    background-attachment: fixed;
   }
 
   ::selection {
@@ -134,10 +138,18 @@
   }
 
   .bg-grid {
-    background-image:
-      linear-gradient(hsl(var(--grid-line) / 0.3) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--grid-line) / 0.3) 1px, transparent 1px);
-    background-size: 60px 60px;
+    background-image: 
+      linear-gradient(hsl(var(--grid-line) / 0.5) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--grid-line) / 0.5) 1px, transparent 1px),
+      radial-gradient(circle at center, transparent 30%, hsl(var(--background) / 0.9) 80%);
+    background-size: 60px 60px, 60px 60px, 100% 100%;
+    background-position: center;
+  }
+
+  .premium-pattern {
+    background-color: transparent;
+    background-image: radial-gradient(hsl(var(--primary) / 0.15) 1px, transparent 1px);
+    background-size: 30px 30px;
   }
 }
 

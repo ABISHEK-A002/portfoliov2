@@ -82,7 +82,7 @@ const SkillsSection = () => {
                   transition={{ delay: i * 0.1 }}
                   className="flex gap-3 p-3 border border-primary/20 hover:border-primary/40 transition-colors bg-primary/[0.03]"
                 >
-                  <span className="text-primary text-xs mt-0.5" style={{ textShadow: '0 0 6px hsl(43 90% 55% / 0.5)' }}>◆</span>
+                  <span className="text-primary text-xs mt-0.5" style={{ textShadow: '0 0 6px hsl(46 65% 52% / 0.5)' }}>◆</span>
                   <p className="text-xs text-card-foreground leading-relaxed">{item}</p>
                 </motion.div>
               ))}

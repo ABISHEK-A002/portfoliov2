@@ -21,8 +21,8 @@ const ParticlesBackground = () => {
 
     let animationId: number;
     const particles: Particle[] = [];
-    // Theme-matched palette: gold, deep amber, crimson red
-    const colors = ["#D4A017", "#B8860B", "#C0392B"];
+    // Theme-matched palette: Premium Gold, Dark Gold, Red Violet, Crimson
+    const colors = ["#D4AF37", "#997A00", "#C71585", "#E30B5D"];
 
     const resize = () => {
       canvas.width = window.innerWidth;
@@ -62,7 +62,7 @@ const ParticlesBackground = () => {
       });
 
       // Draw connections using gold tone
-      ctx.strokeStyle = "#D4A017";
+      ctx.strokeStyle = "#D4AF37";
       ctx.lineWidth = 0.4;
       for (let i = 0; i < particles.length; i++) {
         for (let j = i + 1; j < particles.length; j++) {

@@ -16,7 +16,7 @@ const NetworkMazeRing = ({
   reverse?: boolean;
 }) => {
   const r = size / 2 - 8;
-  const gold = "hsl(43 90% 55%)";
+  const gold = "hsl(46 65% 52%)"; // Premium Gold
 
   // Generate maze-like path segments around the circle
   const segments: string[] = [];
@@ -132,8 +132,9 @@ const NetworkMazeRing = ({
 const HeroSection = () => {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
-      {/* Background grid */}
-      <div className="absolute inset-0 bg-grid opacity-30" />
+      {/* Premium Background Patterns */}
+      <div className="absolute inset-0 bg-grid opacity-40 mix-blend-overlay" />
+      <div className="absolute inset-0 premium-pattern opacity-60 mix-blend-screen" />
 
       {/* Left ambient glow */}
       <div className="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px]" />
@@ -233,7 +234,7 @@ const HeroSection = () => {
             <div
               className="absolute w-[240px] h-[240px] md:w-[320px] md:h-[320px] rounded-full"
               style={{
-                background: "radial-gradient(circle, hsl(43 90% 55% / 0.12) 0%, transparent 70%)",
+                background: "radial-gradient(circle, hsl(46 65% 52% / 0.12) 0%, transparent 70%)",
                 filter: "blur(20px)",
               }}
             />
@@ -248,8 +249,8 @@ const HeroSection = () => {
                 style={{
                   padding: "3px",
                   borderRadius: "50%",
-                  background: "linear-gradient(135deg, hsl(43 90% 55%), hsl(350 70% 50%), hsl(43 90% 55%))",
-                  boxShadow: "0 0 40px hsl(43 90% 55% / 0.4), 0 0 80px hsl(43 90% 55% / 0.15), inset 0 0 20px hsl(43 90% 55% / 0.1)",
+                  background: "linear-gradient(135deg, hsl(46 65% 52%), hsl(322 81% 43%), hsl(46 65% 52%))",
+                  boxShadow: "0 0 40px hsl(46 65% 52% / 0.4), 0 0 80px hsl(46 65% 52% / 0.15), inset 0 0 20px hsl(46 65% 52% / 0.1)",
                 }}
               >
                 <div
@@ -273,19 +274,19 @@ const HeroSection = () => {
               {/* Floating gold node accents */}
               <motion.div
                 className="absolute -top-3 -right-3 w-3 h-3 rounded-full bg-primary"
-                style={{ boxShadow: "0 0 12px hsl(43 90% 55%)" }}
+                style={{ boxShadow: "0 0 12px hsl(46 65% 52%)" }}
                 animate={{ scale: [1, 1.5, 1], opacity: [0.7, 1, 0.7] }}
                 transition={{ duration: 4, repeat: Infinity }}
               />
               <motion.div
                 className="absolute -bottom-3 -left-4 w-2 h-2 rounded-full bg-primary"
-                style={{ boxShadow: "0 0 10px hsl(43 90% 55% / 0.8)" }}
+                style={{ boxShadow: "0 0 10px hsl(46 65% 52% / 0.8)" }}
                 animate={{ scale: [1, 1.6, 1], opacity: [0.6, 1, 0.6] }}
                 transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
               />
               <motion.div
                 className="absolute top-1/2 -right-6 w-1.5 h-1.5 rounded-full bg-primary"
-                style={{ boxShadow: "0 0 8px hsl(43 90% 55% / 0.6)" }}
+                style={{ boxShadow: "0 0 8px hsl(46 65% 52% / 0.6)" }}
                 animate={{ scale: [1, 1.8, 1], opacity: [0.5, 1, 0.5] }}
                 transition={{ duration: 6, repeat: Infinity, delay: 1 }}
               />

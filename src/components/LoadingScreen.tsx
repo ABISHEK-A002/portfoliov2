@@ -38,7 +38,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
   return (
     <AnimatePresence>
       <motion.div
-        className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background bg-grid"
+        className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background premium-pattern bg-grid"
         exit={{ opacity: 0 }}
         transition={{ duration: 0.8 }}
       >
@@ -53,7 +53,7 @@ const LoadingScreen = ({ onComplete }: LoadingScreenProps) => {
             animate={{ scale: [1, 1.2, 1] }}
             transition={{ duration: 2, repeat: Infinity }}
           >
-            <div className="w-4 h-4 rounded-full bg-primary shadow-[0_0_20px_hsl(43,90%,55%,0.6)]" />
+            <div className="w-4 h-4 rounded-full bg-primary shadow-[0_0_20px_hsl(var(--primary)/0.6)]" />
           </motion.div>
         </motion.div>
 

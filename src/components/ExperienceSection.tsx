@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    role: "AI Intern",
+    role: "Junior AI/ML Engineer",
     company: "Cognitica AI",
     location: "Coimbatore, India",
     period: "December 2025 — Present",
@@ -61,17 +61,15 @@ const ExperienceSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
-              className={`relative mb-12 pl-8 md:pl-0 ${
-                i % 2 === 0 ? "md:pr-[55%]" : "md:pl-[55%]"
-              }`}
+              className={`relative mb-12 pl-8 md:pl-0 ${i % 2 === 0 ? "md:pr-[55%]" : "md:pl-[55%]"
+                }`}
             >
-              <div className="absolute left-[-4px] md:left-1/2 md:-translate-x-1/2 top-2 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_hsl(43,90%,55%,0.6)]" />
+              <div className="absolute left-[-4px] md:left-1/2 md:-translate-x-1/2 top-2 w-2 h-2 rounded-full bg-primary shadow-[0_0_10px_hsl(var(--primary)/0.6)]" />
 
-              <div className={`p-6 border transition-all duration-300 card-glow bg-card/30 backdrop-blur-sm ${
-                exp.current
-                  ? "border-primary/50 shadow-[0_0_20px_hsl(43,90%,55%,0.12)]"
+              <div className={`p-6 border transition-all duration-300 card-glow bg-card/30 backdrop-blur-sm ${exp.current
+                  ? "border-primary/50 shadow-[0_0_20px_hsl(var(--primary)/0.12)]"
                   : "border-border/50 hover:border-primary/30"
-              }`}>
+                }`}>
                 <div className="flex items-start justify-between gap-3 flex-wrap mb-2">
                   <span className="text-[10px] tracking-widest text-secondary">{exp.period}</span>
                   {exp.current && (
